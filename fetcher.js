@@ -34,7 +34,7 @@ request(url, (error, response, body) => {
     return `🚨 Error: ${error}`;
   }
 
-  if (!(response.statusCode >= 200) || !(response.statusCode < 300)) {
+  if (!(response.statusCode >= 200 ||response.statusCode < 300)) {
     statusCode = response.statusCode;
     console.log(`🚨 Status: ${statusCode}. File download failed, please check URL.`);
   }
